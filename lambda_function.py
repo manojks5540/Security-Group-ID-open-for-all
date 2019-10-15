@@ -2,7 +2,7 @@
 
 import boto3
 
-def unique(list1):
+def unique(sg_list):
     
     """
     This function is used to fetch unique values from the list.
@@ -10,7 +10,7 @@ def unique(list1):
 
     unique_list = []
 
-    for x in list1:
+    for x in sg_list:
         if x not in unique_list:
             unique_list.append(x)
     print(unique_list)

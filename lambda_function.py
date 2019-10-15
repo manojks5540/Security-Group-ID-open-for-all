@@ -47,6 +47,6 @@ def security_group_check ():
 
 def lambda_handler(event, context):
     """
-    This is lambda Compatible, which invokes actual function.
+    This is Lambda compatible, which invokes actual function.
     """
     security_group_check()    

@@ -37,4 +37,5 @@ def security_group_check ():
 
         unique(sg_id_list)
 
-security_group_check()    
+def lambda_handler(event, context):
+    security_group_check()    

@@ -3,6 +3,11 @@
 import boto3
 
 def unique(list1):
+    
+    """
+    This function is used to fetch unique values from the list.
+    
+    """
 
     unique_list = []
 
@@ -14,8 +19,13 @@ def unique(list1):
 
 
 def security_group_check ():
+    
+    """
+    This function is used to fetch the Security Group ID's of all which has ingress rules allowed to all(0.0.0.0/0).
+    
+    """
 
-    regions = ['us-east-1', 'ap-southeast-1']
+    regions = ['us-east-1', 'ap-southeast-1'] #Provide the list of regions where you need to identify the SG ID'. 
     
     for region in regions:
 
@@ -38,4 +48,8 @@ def security_group_check ():
         unique(sg_id_list)
 
 def lambda_handler(event, context):
+    """
+    This is lambda Compatible, which invokes actual function.
+    
+    """
     security_group_check()    
